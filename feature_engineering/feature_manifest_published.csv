@@ -1,0 +1,333 @@
+feature_id,description,variable_type,data_source,ukb_field,selected_by
+BMI,Body-mass index at baseline,continuous,Declared covariate,21001,Covariate
+PC1,Genetic principal component 1,continuous,Declared covariate,22009,Covariate
+PC10,Genetic principal component 10,continuous,Declared covariate,22009,Covariate
+PC2,Genetic principal component 2,continuous,Declared covariate,22009,Covariate
+PC3,Genetic principal component 3,continuous,Declared covariate,22009,Covariate
+PC4,Genetic principal component 4,continuous,Declared covariate,22009,Covariate
+PC5,Genetic principal component 5,continuous,Declared covariate,22009,Covariate
+PC6,Genetic principal component 6,continuous,Declared covariate,22009,Covariate
+PC7,Genetic principal component 7,continuous,Declared covariate,22009,Covariate
+PC8,Genetic principal component 8,continuous,Declared covariate,22009,Covariate
+PC9,Genetic principal component 9,continuous,Declared covariate,22009,Covariate
+age,Age at the taste assessment,continuous,Declared covariate,,Covariate
+age_baseline,Age at the baseline assessment visit,continuous,Declared covariate,21003,Covariate
+assess_centre_id,UK Biobank assessment centre,categorical,Declared covariate,54,Covariate
+drink,"High-risk alcohol use at baseline, by the sex-specific unit threshold",binary,Declared covariate,"1568, 1578, 1588, 1598, 1608, 5364",Covariate
+sex,Sex,binary,Declared covariate,31,Covariate
+smell_any,Current self-reported loss or change of smell,binary,Declared covariate,28612,Covariate
+smell_extent,Reported functional impact of the smell change,binary,Declared covariate,28614,Covariate
+smell_time,Reported duration of the smell change,ordinal,Declared covariate,28613,Covariate
+smoking,Current smoking status at baseline (non-current vs current),binary,Declared covariate,"1239, 1249, 2644",Covariate
+townsend,Townsend deprivation index,continuous,Declared covariate,22189,Covariate
+phe276,"Disorders of fluid, electrolyte, and acid-base balance",binary,Prior recorded diagnoses (PheCode),PheCode 276,DWAS
+phe276.5,Hypovolemia,binary,Prior recorded diagnoses (PheCode),PheCode 276.5,DWAS
+phe291.4,Specific nonpsychotic mental disorders due to brain damage,binary,Prior recorded diagnoses (PheCode),PheCode 291.4,DWAS
+phe296,Mood disorders,binary,Prior recorded diagnoses (PheCode),PheCode 296,DWAS
+phe296.2,Depression,binary,Prior recorded diagnoses (PheCode),PheCode 296.2,DWAS
+phe296.22,Major depressive disorder,binary,Prior recorded diagnoses (PheCode),PheCode 296.22,DWAS
+phe327,Sleep disorders,binary,Prior recorded diagnoses (PheCode),PheCode 327,DWAS
+phe332,Parkinson's disease,binary,Prior recorded diagnoses (PheCode),PheCode 332,DWAS
+phe340,Migraine,binary,Prior recorded diagnoses (PheCode),PheCode 340,DWAS
+phe352,Disorders of other cranial nerves,binary,Prior recorded diagnoses (PheCode),PheCode 352,DWAS
+phe395.4,Nonrheumatic pulmonary valve disorders,binary,Prior recorded diagnoses (PheCode),PheCode 395.4,DWAS
+phe411,Ischemic Heart Disease,binary,Prior recorded diagnoses (PheCode),PheCode 411,DWAS
+phe411.3,Angina pectoris,binary,Prior recorded diagnoses (PheCode),PheCode 411.3,DWAS
+phe411.8,"Other chronic ischemic heart disease, unspecified",binary,Prior recorded diagnoses (PheCode),PheCode 411.8,DWAS
+phe427,Cardiac dysrhythmias,binary,Prior recorded diagnoses (PheCode),PheCode 427,DWAS
+phe427.2,Atrial fibrillation and flutter,binary,Prior recorded diagnoses (PheCode),PheCode 427.2,DWAS
+phe433,Cerebrovascular disease,binary,Prior recorded diagnoses (PheCode),PheCode 433,DWAS
+phe458,Hypotension,binary,Prior recorded diagnoses (PheCode),PheCode 458,DWAS
+phe458.9,Hypotension NOS,binary,Prior recorded diagnoses (PheCode),PheCode 458.9,DWAS
+phe471,Nasal polyps,binary,Prior recorded diagnoses (PheCode),PheCode 471,DWAS
+phe475,Chronic sinusitis,binary,Prior recorded diagnoses (PheCode),PheCode 475,DWAS
+phe495,Asthma,binary,Prior recorded diagnoses (PheCode),PheCode 495,DWAS
+phe496,Chronic airway obstruction,binary,Prior recorded diagnoses (PheCode),PheCode 496,DWAS
+phe496.2,Chronic bronchitis,binary,Prior recorded diagnoses (PheCode),PheCode 496.2,DWAS
+phe496.21,Obstructive chronic bronchitis,binary,Prior recorded diagnoses (PheCode),PheCode 496.21,DWAS
+phe496.3,Bronchiectasis,binary,Prior recorded diagnoses (PheCode),PheCode 496.3,DWAS
+phe530,Diseases of esophagus,binary,Prior recorded diagnoses (PheCode),PheCode 530,DWAS
+phe530.1,"Esophagitis, GERD and related diseases",binary,Prior recorded diagnoses (PheCode),PheCode 530.1,DWAS
+phe530.11,GERD,binary,Prior recorded diagnoses (PheCode),PheCode 530.11,DWAS
+phe564,Functional digestive disorders,binary,Prior recorded diagnoses (PheCode),PheCode 564,DWAS
+phe564.1,Irritable Bowel Syndrome,binary,Prior recorded diagnoses (PheCode),PheCode 564.1,DWAS
+phe596,Other disorders of bladder,binary,Prior recorded diagnoses (PheCode),PheCode 596,DWAS
+phe600,Hyperplasia of prostate,binary,Prior recorded diagnoses (PheCode),PheCode 600,DWAS
+dx_count_digestive,Count of prior digestive diagnoses (PheCode 520-579),derived_continuous,Derived,,Derived
+dx_count_neuro,Count of prior neurological diagnoses (PheCode 320-349),derived_continuous,Derived,,Derived
+dx_count_psych,Count of prior mental-disorder diagnoses (PheCode 290-319),derived_continuous,Derived,,Derived
+dx_count_total,Count of distinct prior PheCode diagnoses (overall burden and a control for health-care contact),derived_continuous,Derived,,Derived
+n_protective_dx,Count of the prior diagnoses that were inversely associated with the outcome in the disease-wide scan,derived_continuous,Derived,,Derived
+smell_2w_strict_OR,Composite smell indicator: smell change lasting at least two weeks or affecting daily life,derived_binary,Derived,"28612, 28613, 28614",Derived
+years_baseline_to_taste,Interval in years between the baseline assessment and the taste assessment,derived_continuous,Derived,,Derived
+nutr_cholesterol_mg,Cholesterol,continuous,24-h dietary recall (Oxford WebQ),26037,ExWAS
+nutr_mufa_g,Monounsaturated fatty acids,continuous,24-h dietary recall (Oxford WebQ),26032,ExWAS
+nutr_saturated_fa_g,Saturated fatty acids,continuous,24-h dietary recall (Oxford WebQ),26014,ExWAS
+nutr_sodium_mg,Sodium,continuous,24-h dietary recall (Oxford WebQ),26052,ExWAS
+nutr_starch_g,Starch,continuous,24-h dietary recall (Oxford WebQ),26031,ExWAS
+nutr_sucrose_g,Sucrose,continuous,24-h dietary recall (Oxford WebQ),26059,ExWAS
+nutr_total_nitrogen_g,Total nitrogen,continuous,24-h dietary recall (Oxford WebQ),26060,ExWAS
+nutr_total_weight_bev_g,Total weight of beverages only,continuous,24-h dietary recall (Oxford WebQ),26001,ExWAS
+nutr_vitamin_e_mg,Vitamin E,continuous,24-h dietary recall (Oxford WebQ),26028,ExWAS
+supp_any_ever,Vitamin supplement user,binary,24-h dietary recall (Oxford WebQ),104670,ExWAS
+supp_calcium,Vitamin and/or mineral supplement use,binary,24-h dietary recall (Oxford WebQ),20084,ExWAS
+supp_folic_acid,Vitamin and/or mineral supplement use,binary,24-h dietary recall (Oxford WebQ),20084,ExWAS
+supp_vitamin_b12,Vitamin and/or mineral supplement use,binary,24-h dietary recall (Oxford WebQ),20084,ExWAS
+supp_vitamin_d,Vitamin and/or mineral supplement use,binary,24-h dietary recall (Oxford WebQ),20084,ExWAS
+supp_zinc,Vitamin and/or mineral supplement use,binary,24-h dietary recall (Oxford WebQ),20084,ExWAS
+body_fat_pct,Body fat percentage,continuous,Anthropometric & physiological,23099,ExWAS
+dbp,Diastolic BP mean of 2 readings (mmHg),continuous,Anthropometric & physiological,,ExWAS
+fat_free_mass,Whole body fat-free mass (kg),continuous,Anthropometric & physiological,23101,ExWAS
+grip_left,Hand grip strength left (kg),continuous,Anthropometric & physiological,46,ExWAS
+grip_max,Max grip strength L/R (kg),continuous,Anthropometric & physiological,,ExWAS
+grip_right,Hand grip strength right (kg),continuous,Anthropometric & physiological,47,ExWAS
+hip_circ,Hip circumference (cm),continuous,Anthropometric & physiological,49,ExWAS
+trunk_fat_pct,Trunk fat percentage,continuous,Anthropometric & physiological,23127,ExWAS
+waist_circ,Waist circumference (cm),continuous,Anthropometric & physiological,48,ExWAS
+weight,Weight (kg),continuous,Anthropometric & physiological,21002,ExWAS
+whole_body_fat,Whole body fat mass (kg),continuous,Anthropometric & physiological,23100,ExWAS
+whr,Waist-hip ratio,continuous,Anthropometric & physiological,,ExWAS
+alt,Serum alt,continuous,Blood biochemistry & haematology,30620,ExWAS
+apoa,Serum apoa,continuous,Blood biochemistry & haematology,30630,ExWAS
+crp,Serum crp,continuous,Blood biochemistry & haematology,30710,ExWAS
+cystatin_c,Serum cystatin_c,continuous,Blood biochemistry & haematology,30720,ExWAS
+eosinophil,Blood eosinophil,continuous,Blood biochemistry & haematology,30150,ExWAS
+eosinophil_pct,Blood eosinophil_pct,continuous,Blood biochemistry & haematology,30210,ExWAS
+ggt,Serum ggt,continuous,Blood biochemistry & haematology,30730,ExWAS
+hba1c,Serum hba1c,continuous,Blood biochemistry & haematology,30750,ExWAS
+hdl,Serum hdl,continuous,Blood biochemistry & haematology,30760,ExWAS
+hls_retic,Blood hls_retic,continuous,Blood biochemistry & haematology,30300,ExWAS
+hls_retic_pct,Blood hls_retic_pct,continuous,Blood biochemistry & haematology,30290,ExWAS
+igf1,Serum igf1,continuous,Blood biochemistry & haematology,30770,ExWAS
+immature_retic,Blood immature_retic,continuous,Blood biochemistry & haematology,30280,ExWAS
+mcv,Blood mcv,continuous,Blood biochemistry & haematology,30040,ExWAS
+mean_spher_vol,Blood mean_spher_vol,continuous,Blood biochemistry & haematology,30270,ExWAS
+neutrophil,Blood neutrophil,continuous,Blood biochemistry & haematology,30140,ExWAS
+rdw,Blood rdw,continuous,Blood biochemistry & haematology,30070,ExWAS
+retic_count,Blood retic_count,continuous,Blood biochemistry & haematology,30250,ExWAS
+retic_pct,Blood retic_pct,continuous,Blood biochemistry & haematology,30240,ExWAS
+shbg,Serum shbg,continuous,Blood biochemistry & haematology,30830,ExWAS
+testosterone,Serum testosterone,continuous,Blood biochemistry & haematology,30850,ExWAS
+triglycerides,Serum triglycerides,continuous,Blood biochemistry & haematology,30870,ExWAS
+urate,Serum urate,continuous,Blood biochemistry & haematology,30880,ExWAS
+vitamin_d,Serum vitamin_d,continuous,Blood biochemistry & haematology,30890,ExWAS
+wbc,Blood wbc,continuous,Blood biochemistry & haematology,30000,ExWAS
+diabetes_sr,Diabetes diagnosed by doctor,binary,Clinical screening & treatment,2443,ExWAS
+fluid_intel,Fluid intelligence score,continuous,Clinical screening & treatment,20016,ExWAS
+taste_drug_user_baseline_numeric,Taste-affecting medication use at baseline,binary,Clinical screening & treatment,,ExWAS
+vascular_angina,Vascular/heart problems diagnosed by doctor: angina,binary,Clinical screening & treatment,6150,ExWAS
+vascular_count,Vascular/heart problems diagnosed by doctor: number of categories reported,ordinal,Clinical screening & treatment,6150,ExWAS
+vascular_heart_attack,Vascular/heart problems diagnosed by doctor: heart attack,binary,Clinical screening & treatment,6150,ExWAS
+vascular_high_blood_pressure,Vascular/heart problems diagnosed by doctor: high blood pressure,binary,Clinical screening & treatment,6150,ExWAS
+vascular_stroke,Vascular/heart problems diagnosed by doctor: stroke,binary,Clinical screening & treatment,6150,ExWAS
+cog_fluid_iq,Fluid intelligence score,continuous,Cognitive function online,20191,ExWAS
+cog_matrix_reasoning,Matrix pattern completion: number of puzzles correctly solved,continuous,Cognitive function online,20760,ExWAS
+cog_symbol_digit,Number of symbol digit matches made correctly,continuous,Cognitive function online,20159,ExWAS
+cog_tmt_a,Duration to complete numeric path (trail #1),continuous,Cognitive function online,20156,ExWAS
+cog_tmt_b,Duration to complete alphanumeric path (trail #2),continuous,Cognitive function online,20157,ExWAS
+cog_tmt_ba,Duration to complete alphanumeric path (trail #2),derived_continuous,Cognitive function online,20157-20156,ExWAS
+employment_in_paid_employment_or_self_employed,Current employment status: in paid employment or self employed,binary,Demographics & SES,6142,ExWAS
+employment_unable_to_work_because_of_sickness_or_disability,Current employment status: unable to work because of sickness or disability,binary,Demographics & SES,6142,ExWAS
+income,Average total household income before tax,ordinal,Demographics & SES,738,ExWAS
+qualification_a_levels_as_levels_or_equivalent,Qualifications: a levels as levels or equivalent,binary,Demographics & SES,6138,ExWAS
+qualification_college_or_university_degree,Qualifications: college or university degree,binary,Demographics & SES,6138,ExWAS
+qualification_nvq_or_hnd_or_hnc_or_equivalent,Qualifications: nvq or hnd or hnc or equivalent,binary,Demographics & SES,6138,ExWAS
+bread_type_white,bread_type: White,binary,Dietary intake & preferences,1448,ExWAS
+bread_type_wholemeal_or_wholegrain,bread_type: Wholemeal or wholegrain,binary,Dietary intake & preferences,1448,ExWAS
+cereal_intake,Cereal intake,continuous,Dietary intake & preferences,1458,ExWAS
+cereal_type_muesli,cereal_type: Muesli,binary,Dietary intake & preferences,1468,ExWAS
+cereal_type_oat_cereal_e_g_ready_brek_porridge,"cereal_type: Oat cereal (e.g. Ready Brek, porridge)",binary,Dietary intake & preferences,1468,ExWAS
+cooked_veg,Cooked vegetable intake,continuous,Dietary intake & preferences,1289,ExWAS
+diet_change,Major dietary changes in the last 5 years,binary,Dietary intake & preferences,1538,ExWAS
+diet_change_ill,Major dietary change in the last 5 years because of illness,binary,Dietary intake & preferences,1538,ExWAS
+diet_variation,Variation in diet,ordinal,Dietary intake & preferences,1548,ExWAS
+hot_drink_temp,Hot drink temperature,ordinal,Dietary intake & preferences,1518,ExWAS
+milk_type_never_rarely_have_milk,milk_type: Never/rarely have milk,binary,Dietary intake & preferences,1418,ExWAS
+never_eat_count,"Never eat eggs, dairy, wheat, sugar: number of categories reported",ordinal,Dietary intake & preferences,6144,ExWAS
+never_eat_dairy_products,"Never eat eggs, dairy, wheat, sugar: dairy products",binary,Dietary intake & preferences,6144,ExWAS
+never_eat_eggs_or_foods_containing_eggs,"Never eat eggs, dairy, wheat, sugar: eggs or foods containing eggs",binary,Dietary intake & preferences,6144,ExWAS
+never_eat_wheat_products,"Never eat eggs, dairy, wheat, sugar: wheat products",binary,Dietary intake & preferences,6144,ExWAS
+poultry_freq,Poultry intake,ordinal,Dietary intake & preferences,1359,ExWAS
+processed_meat_freq,Processed meat intake,ordinal,Dietary intake & preferences,1349,ExWAS
+salt_added,Salt added to food,ordinal,Dietary intake & preferences,1478,ExWAS
+spread_type_butter_spreadable_butter,spread_type: Butter/spreadable butter,binary,Dietary intake & preferences,1428,ExWAS
+water_intake,Water intake,continuous,Dietary intake & preferences,1528,ExWAS
+abdom_discomfort_freq,Frequency of discomfort/pain in abdomen in last 3 months,ordinal,Digestive health questionnaire,21025,ExWAS
+abdom_distension,Currently suffer from abdominal distension,binary,Digestive health questionnaire,21038,ExWAS
+abdom_pain_6mo,Abdominal discomfort/pain for 6 months or longer,binary,Digestive health questionnaire,21027,ExWAS
+abdom_pain_severity,Severity of current abdominal pain,continuous,Digestive health questionnaire,21036,ExWAS
+bowel_movements_day,Average number of times bowels opened per day,continuous,Digestive health questionnaire,21044,ExWAS
+bowel_satisfaction,Satisfaction with bowel habits,continuous,Digestive health questionnaire,21040,ExWAS
+coeliac_gluten,Diagnosed with coeliac disease or gluten sensitivity,binary,Digestive health questionnaire,21068,ExWAS
+ibs_ever,Ever diagnosed with IBS,binary,Digestive health questionnaire,21024,ExWAS
+ibs_family_history,Family history of IBS,binary,Digestive health questionnaire,21065,ExWAS
+phq15_dizziness,PHQ-15 somatic item: degree bothered by dizziness in the last 3 months,ordinal,Digestive health questionnaire,21053,ExWAS
+phq15_fatigue,PHQ-15 somatic item: degree bothered by feeling tired all the time in the last 3 months,ordinal,Digestive health questionnaire,21060,ExWAS
+phq15_headache,PHQ-15 somatic item: degree bothered by headaches in the last 3 months,ordinal,Digestive health questionnaire,21051,ExWAS
+phq15_nausea,PHQ-15 somatic item: degree bothered by nausea in the last 3 months,ordinal,Digestive health questionnaire,21059,ExWAS
+phq15_somatic_total,Composite PHQ-15 somatic burden: sum of the four somatic items (range 0-8),derived_continuous,Digestive health questionnaire,,ExWAS
+sensitive_stomach,Sensitive stomach,binary,Digestive health questionnaire,21064,ExWAS
+cond_cfs,Ever had chronic Fatigue Syndrome or Myalgic Encephalomyelitis (M.E.),binary,Experience of pain questionnaire,120010,ExWAS
+cond_fibromyalgia,Ever had fibromyalgia syndrome,binary,Experience of pain questionnaire,120009,ExWAS
+cond_migraine,Ever had migraine,binary,Experience of pain questionnaire,120016,ExWAS
+cond_neuropathy,Ever had any cause of nerve damage/neuropathy other than diabetic neuropathy,binary,Experience of pain questionnaire,120008,ExWAS
+pain_avg,Scale of pain that bothers most on average,continuous,Experience of pain questionnaire,120088,ExWAS
+pain_chronic,Troubled by pain or discomfort present for more than 3 months,binary,Experience of pain questionnaire,120019,ExWAS
+pain_dn4_positive,Burning pain present in pain that bothers the most,binary,Experience of pain questionnaire,120046-120052,ExWAS
+pain_dn4_score,Burning pain present in pain that bothers the most,continuous,Experience of pain questionnaire,120046-120052,ExWAS
+pain_health_today,Scale to indicate how health is today,continuous,Experience of pain questionnaire,120103,ExWAS
+pain_interference_mean,Scale of how much pain that bothers most has interfered with general activity,continuous,Experience of pain questionnaire,120091-120097,ExWAS
+pain_widespread,Pain or discomfort all over the body in the last 3 months,binary,Experience of pain questionnaire,120021,ExWAS
+fpq_pca_pc1,"Composite dietary preference pattern (data-driven, cf. May-Wilson 2022)",derived_continuous,Food preference questionnaire,,ExWAS
+fpq_taste_fatty,Liking for fatty foods,continuous,Food preference questionnaire,20659,ExWAS
+fpq_taste_salt_adding,Liking for adding salt to foods,continuous,Food preference questionnaire,20600,ExWAS
+fpq_taste_salty,Liking for salty foods,continuous,Food preference questionnaire,20716,ExWAS
+able_confide,Able to confide,ordinal,General & mental health,2110,ExWAS
+depressed_mood,Frequency of depressed mood in last 2 weeks,ordinal,General & mental health,2050,ExWAS
+ever_depressed,Ever depressed for a whole week,binary,General & mental health,4598,ExWAS
+ever_unenthu,Ever unenthusiastic/disinterested for a whole week,binary,General & mental health,4631,ExWAS
+falls,Falls in the last year,ordinal,General & mental health,2296,ExWAS
+friend_visits,Frequency of friend/family visits,ordinal,General & mental health,1031,ExWAS
+health_rating,Overall health rating,ordinal,General & mental health,2178,ExWAS
+loneliness,"Loneliness, isolation",binary,General & mental health,2020,ExWAS
+longstanding_ill,"Long-standing illness, disability or infirmity",binary,General & mental health,2188,ExWAS
+mood_swings,Mood swings,binary,General & mental health,1920,ExWAS
+n_medications,Number of medications taken,continuous,General & mental health,137,ExWAS
+neuroticism,Neuroticism score (0–12),continuous,General & mental health,20127,ExWAS
+phq2_score,PHQ-2 depression score: depressed mood plus unenthusiasm,ordinal,General & mental health,"2050, 2060",ExWAS
+stressor_count,"Illness, injury, bereavement, stress in last 2 years: number of categories reported",ordinal,General & mental health,6145,ExWAS
+stressor_death_of_a_close_relative,"Illness, injury, bereavement, stress in last 2 years: death of a close relative",binary,General & mental health,6145,ExWAS
+stressor_financial_difficulties,"Illness, injury, bereavement, stress in last 2 years: financial difficulties",binary,General & mental health,6145,ExWAS
+stressor_marital_separation_divorce,"Illness, injury, bereavement, stress in last 2 years: marital separation divorce",binary,General & mental health,6145,ExWAS
+stressor_serious_illness_injury_or_assault_of_a_close_relative,"Illness, injury, bereavement, stress in last 2 years: serious illness injury or assault of a close relative",binary,General & mental health,6145,ExWAS
+stressor_serious_illness_injury_or_assault_to_yourself,"Illness, injury, bereavement, stress in last 2 years: serious illness injury or assault to yourself",binary,General & mental health,6145,ExWAS
+unenthusiasm,Frequency of unenthusiasm / disinterest in last 2 weeks,ordinal,General & mental health,2060,ExWAS
+weight_change,Weight change compared with one year ago,ordinal,General & mental health,2306,ExWAS
+chronotype,Morning/evening person (chronotype),ordinal,Lifestyle & sleep,1180,ExWAS
+daytime_dozing,Daytime dozing / sleeping,ordinal,Lifestyle & sleep,1220,ExWAS
+getting_up,Getting up in morning,ordinal,Lifestyle & sleep,1170,ExWAS
+insomnia,Sleeplessness / insomnia,ordinal,Lifestyle & sleep,1200,ExWAS
+nap_daytime,Nap during day,ordinal,Lifestyle & sleep,1190,ExWAS
+sleep_hours,Sleep duration (hours),continuous,Lifestyle & sleep,1160,ExWAS
+snoring,Snoring,binary,Lifestyle & sleep,1210,ExWAS
+audit_total,"AUDIT total score: sum of the ten items (range 0-40), a problem-drinking measure distinct from the baseline alcohol-frequency covariate",derived_continuous,Mental health questionnaire,20414+,ExWAS
+gad7_binary,Recent feelings or nervousness or anxiety,derived_binary,Mental health questionnaire,20506+,ExWAS
+gad7_total,Recent feelings or nervousness or anxiety,derived_continuous,Mental health questionnaire,20506+,ExWAS
+mania_excitable,Ever had period of mania / excitability,binary,Mental health questionnaire,20501,ExWAS
+mania_irritable,Ever had period extreme irritability,binary,Mental health questionnaire,20502,ExWAS
+mania_manifestation_count,Manifestations of mania or irritability,derived_continuous,Mental health questionnaire,20548,ExWAS
+mania_severity,Severity of problems due to mania or irritability,ordinal,Mental health questionnaire,20493,ExWAS
+phq9_binary,Recent lack of interest or pleasure in doing things,derived_binary,Mental health questionnaire,20514+,ExWAS
+phq9_total,Recent lack of interest or pleasure in doing things,derived_continuous,Mental health questionnaire,20514+,ExWAS
+any_oral_problem_baseline,Any oral problem composite at baseline,binary,Oral health,,ExWAS
+oral_bleeding_gums_baseline,Bleeding gums at baseline,binary,Oral health,,ExWAS
+oral_loose_teeth_baseline,Loose teeth at baseline,binary,Oral health,,ExWAS
+oral_mouth_ulcers_baseline,Mouth ulcers at baseline,binary,Oral health,,ExWAS
+oral_painful_gums_baseline,Painful gums at baseline,binary,Oral health,,ExWAS
+oral_toothache_baseline,Toothache at baseline,binary,Oral health,,ExWAS
+periodontal_indicator_baseline,Periodontal composite indicator at baseline,binary,Oral health,,ExWAS
+age_menarche,Age at menarche (years),continuous,Reproductive (female-only),2714,ExWAS
+age_menopause,Age at menopause (years),continuous,Reproductive (female-only),3581,ExWAS
+menopause,Had menopause,binary,Reproductive (female-only),2724,ExWAS
+back_pain_3mo,Back pain for 3+ months,binary,Sensory function & pain,3571,ExWAS
+general_pain_3mo,General pain for 3+ months,binary,Sensory function & pain,2956,ExWAS
+headache_3mo,Headaches for 3+ months,binary,Sensory function & pain,3799,ExWAS
+hearing_diff,Hearing difficulty/problems,binary,Sensory function & pain,2247,ExWAS
+hip_pain_3mo,Hip pain for 3+ months,binary,Sensory function & pain,3414,ExWAS
+knee_pain_3mo,Knee pain for 3+ months,binary,Sensory function & pain,3773,ExWAS
+neck_pain_3mo,Neck/shoulder pain for 3+ months,binary,Sensory function & pain,3404,ExWAS
+pain_month_back_pain,Pain type(s) experienced in last month: back pain,binary,Sensory function & pain,6159,ExWAS
+pain_month_count,Pain type(s) experienced in last month: number of categories reported,ordinal,Sensory function & pain,6159,ExWAS
+pain_month_facial_pain,Pain type(s) experienced in last month: facial pain,binary,Sensory function & pain,6159,ExWAS
+pain_month_headache,Pain type(s) experienced in last month: headache,binary,Sensory function & pain,6159,ExWAS
+pain_month_hip_pain,Pain type(s) experienced in last month: hip pain,binary,Sensory function & pain,6159,ExWAS
+pain_month_knee_pain,Pain type(s) experienced in last month: knee pain,binary,Sensory function & pain,6159,ExWAS
+pain_month_neck_or_shoulder_pain,Pain type(s) experienced in last month: neck or shoulder pain,binary,Sensory function & pain,6159,ExWAS
+pain_month_pain_all_over_the_body,Pain type(s) experienced in last month: pain all over the body,binary,Sensory function & pain,6159,ExWAS
+pain_month_stomach_or_abdominal_pain,Pain type(s) experienced in last month: stomach or abdominal pain,binary,Sensory function & pain,6159,ExWAS
+pain_site_count,Number of body sites with pain lasting 3+ months,ordinal,Sensory function & pain,,ExWAS
+tinnitus,Tinnitus,ordinal,Sensory function & pain,4803,ExWAS
+work_chemical_fumes,Workplace full of chemical or other fumes | Array 0,binary,Work history questionnaire,22610,ExWAS
+work_chemical_score,Composite chemical exposure burden — chemosensory + neurotoxic taste pathways,ordinal,Work history questionnaire,derived,ExWAS
+work_cigarette_smoke,Workplace had a lot of cigarette smoke from other people smoking | Array 0,binary,Work history questionnaire,22611,ExWAS
+work_diesel,Workplace had a lot of diesel exhaust | Array 0,binary,Work history questionnaire,22615,ExWAS
+work_dusty,Workplace very dusty | Array 0,binary,Work history questionnaire,22609,ExWAS
+work_noisy,Workplace very noisy | Array 0,binary,Work history questionnaire,22606,ExWAS
+work_paints_thinners,"Worked with paints, thinners or glues | Array 0",binary,Work history questionnaire,22613,ExWAS
+work_pesticides,Worked with pesticides | Array 0,binary,Work history questionnaire,22614,ExWAS
+APOE_e4_dose,APOE e4 allele dose from the canonical two-variant encoding,ordinal,Targeted genotype,"rs429358, rs7412",GWAS
+Albumin,Albumin (Fluid balance),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+ApoA1,ApoA1 (Apolipoproteins),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+Citrate,Citrate (Glycolysis metabolites),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+DHA,DHA (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+DHA_pct,DHA % (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+Gln,Gln (Amino acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+GlycA,GlycA (Inflammation),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+HDL_C,HDL-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+HDL_FC_by_CE,HDL-FC/CE (Other lipids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+HDL_FC_pct,HDL-FC % (Other lipids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+IDL_C_pct,IDL-C % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+IDL_FC_pct,IDL-FC % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+LA_pct,LA % (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+LDL_FC_pct,LDL-FC % (Other lipids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+LDL_size,LDL size (Particle size),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_HDL_CE_pct_C,L-HDL-CE %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_HDL_C_pct,L-HDL-C % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_HDL_FC_pct,L-HDL-FC % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_LDL_C_pct,L-LDL-C % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_VLDL_CE_pct,L-VLDL-CE % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_VLDL_FC_pct,L-VLDL-FC % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_VLDL_FC_pct_C,L-VLDL-FC %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+L_VLDL_PL_pct,L-VLDL-PL % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+MUFA,MUFA (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+MUFA_pct,MUFA % (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+M_HDL_PL_pct,M-HDL-PL % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+M_HDL_TG,M-HDL-TG (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+M_LDL_CE_pct,M-LDL-CE % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+M_LDL_C_pct,M-LDL-C % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+M_VLDL_FC_pct_C,M-VLDL-FC %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+M_VLDL_TG_pct,M-VLDL-TG % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+PUFA_pct,PUFA % (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+SFA,SFA (Fatty acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_HDL_L,S-HDL-L (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_HDL_PL_pct,S-HDL-PL % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_HDL_TG_pct,S-HDL-TG % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_LDL_FC_pct_C,S-LDL-FC %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_LDL_PL_pct,S-LDL-PL % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_LDL_TG_pct,S-LDL-TG % (LDL/IDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+S_VLDL_FC_pct_C,S-VLDL-FC %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+Total_PL_pct,Total-PL % (Other lipids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+Total_TG,Total-TG (Triglycerides),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+VLDL_C,VLDL-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+VLDL_FC_pct_C,VLDL-FC %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+Val,Val (Amino acids),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_HDL_FC_by_CE,XL-HDL-FC/CE (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_HDL_PL,XL-HDL-PL (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_HDL_PL_pct,XL-HDL-PL % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_HDL_TG_pct,XL-HDL-TG % (HDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_VLDL_C,XL-VLDL-C (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_VLDL_FC_by_CE,XL-VLDL-FC/CE (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_VLDL_FC_pct,XL-VLDL-FC % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XL_VLDL_TG_pct,XL-VLDL-TG % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XS_VLDL_FC_pct,XS-VLDL-FC % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XS_VLDL_FC_pct_C,XS-VLDL-FC %-C (Cholesterol),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XS_VLDL_PL_pct,XS-VLDL-PL % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+XXL_VLDL_FC_pct,XXL-VLDL-FC % (VLDL subclasses),continuous,Plasma metabolome (Nightingale NMR),,MWAS
+pheno_2w_strict,Primary outcome: self-reported loss or change of taste lasting at least two weeks or affecting daily life,binary,Primary outcome,"28615, 28616, 28617",Outcome
+a1bg,Alpha-1B-glycoprotein (Alpha-1-B glycoprotein),continuous,Plasma proteome (Olink),A1BG,PWAS
+apcs,Serum amyloid P-component (SAP) (9.5S alpha-1-glycoprotein) [Cleaved into: Serum amyloid P-component(1-203)],continuous,Plasma proteome (Olink),APCS,PWAS
+ccl19,C-C motif chemokine 19 (Beta-chemokine exodus-3) (CK beta-11) (Epstein-Barr virus-induced molecule 1 ligand chemokine) (EBI1 ligand chemokine) (ELC) (Macrophage inflammatory protein 3 beta) (MIP-3-beta) (Small-inducible cytokine A19),continuous,Plasma proteome (Olink),CCL19,PWAS
+ces1,Liver carboxylesterase 1 (Acyl-coenzyme A:cholesterol acyltransferase) (ACAT) (Brain carboxylesterase hBr1) (Carboxylesterase 1) (CE-1) (hCE-1) (EC 3.1.1.1) (Cholesteryl ester hydrolase) (CEH) (EC 3.1.1.13) (Cocaine carboxylesterase) (Egasyn) (HMSE) (Methylumbelliferyl-acetate deacetylase 1) (EC 3.1.1.56) (Monocyte/macrophage serine esterase) (Retinyl ester hydrolase) (REH) (Serine esterase 1) (Triacylglycerol hydrolase) (TGH),continuous,Plasma proteome (Olink),CES1,PWAS
+cfb,Complement factor B (EC 3.4.21.47) (C3/C5 convertase) (Glycine-rich beta glycoprotein) (GBG) (PBF2) (Properdin factor B) [Cleaved into: Complement factor B Ba (Ba); Complement factor B Bb (Bb)],continuous,Plasma proteome (Olink),CFB,PWAS
+cntn5,Contactin-5 (Neural recognition molecule NB-2) (hNB-2),continuous,Plasma proteome (Olink),CNTN5,PWAS
+ctsd,Cathepsin D (EC 3.4.23.5) [Cleaved into: Cathepsin D light chain; Cathepsin D heavy chain],continuous,Plasma proteome (Olink),CTSD,PWAS
+enpp6,Glycerophosphocholine cholinephosphodiesterase ENPP6 (GPC-Cpde) (EC 3.1.4.-) (EC 3.1.4.38) (Choline-specific glycerophosphodiester phosphodiesterase) (Ectonucleotide pyrophosphatase/phosphodiesterase family member 6) (E-NPP 6) (NPP-6),continuous,Plasma proteome (Olink),ENPP6,PWAS
+f9,Coagulation factor IX (EC 3.4.21.22) (Christmas factor) (Plasma thromboplastin component) (PTC) [Cleaved into: Coagulation factor IXa light chain; Coagulation factor IXa heavy chain],continuous,Plasma proteome (Olink),F9,PWAS
+igsf9,Protein turtle homolog A (Immunoglobulin superfamily member 9A) (IgSF9A),continuous,Plasma proteome (Olink),IGSF9,PWAS
+inhbc,Inhibin beta C chain (Activin beta-C chain),continuous,Plasma proteome (Olink),INHBC,PWAS
+lep,Leptin (Obese protein) (Obesity factor),continuous,Plasma proteome (Olink),LEP,PWAS
+orm1,Alpha-1-acid glycoprotein 1 (AGP 1) (Orosomucoid-1) (OMD 1),continuous,Plasma proteome (Olink),ORM1,PWAS
+oxt,Oxytocin-neurophysin 1 (OT-NPI) [Cleaved into: Oxytocin (Ocytocin); Neurophysin 1],continuous,Plasma proteome (Olink),OXT,PWAS
+palm2,PALM2-AKAP2 fusion protein (A-kinase anchor protein 2) (AKAP-2) (AKAP-KL) (Paralemmin A kinase anchor protein) (Paralemmin-2) (Protein kinase A-anchoring protein 2) (PRKA2),continuous,Plasma proteome (Olink),PALM2,PWAS
+pon3,Serum paraoxonase/lactonase 3 (EC 3.1.1.2) (EC 3.1.1.81) (EC 3.1.8.1),continuous,Plasma proteome (Olink),PON3,PWAS
+wfikkn2,"WAP, Kazal, immunoglobulin, Kunitz and NTR domain-containing protein 2 (Growth and differentiation factor-associated serum protein 1) (GASP-1) (hGASP-1) (WAP, follistatin, immunoglobulin, Kunitz and NTR domain-containing-related protein) (WFIKKN-related protein)",continuous,Plasma proteome (Olink),WFIKKN2,PWAS
