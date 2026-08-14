@@ -1,4 +1,4 @@
-# ukb_taste_dysfunction Analysis code
+# Analysis code for UKB taste-dysfunction research
 Review-facing code for the UK Biobank taste-dysfunction study: cohort and phenotype derivation, association scans, and the downstream feature selection, supervised classification and unsupervised subtyping.
 Conventions throughout:
 
