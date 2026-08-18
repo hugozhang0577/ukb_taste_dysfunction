@@ -103,25 +103,11 @@ The option decides what a categorical answer looks like in the exported file:
 | `exwas_baseline/field_list.txt`, `exwas_followup/field_list.txt` | `REPLACE` | the derivation code matches the readable answer text              |
 | everything else                                                      | `RAW`     | the derivation code does its own recoding from the numeric coding |
 
-The two questionnaire scans cover hundreds of categorical items on unrelated
-answer scales. Under `REPLACE` each answer arrives as the text the participant
-was shown, so a derivation reads `== "Never"` or `== "Once or more daily"` and
-is legible against the questionnaire itself; under `RAW` the same line would be
-`== 0` or `== 5` against a per-field data-coding that has to be looked up
-separately, and a wrong lookup is invisible. That is why
-`exwas_baseline/01_derive_exposures.R` compares answer strings throughout and
-has no numeric-code comparisons at all.
+The two questionnaire scans contain hundreds of categorical questions, each with its own response scale. For the ExWAS analysis, we use the `REPLACE` export format, in which each response is stored as the label shown to the participant. This makes the derivation code easy to read and verify against the original questionnaire—for example, `== "Never"` or `== "Once or more daily"`. With the `RAW` format, the same comparisons would use numeric codes such as `== 0` or `== 5`. Because these codes vary across fields, they must be checked against a separate coding reference, making errors much harder to detect. For this reason, `exwas_baseline/01_derive_exposures.R` compares response labels rather than numeric codes.
 
-Everywhere else the recoding is explicit in the script, so the numeric values are
-what is wanted and `RAW` is the right choice. `preprocessing/01_build_base_table.R`
-is deliberately tolerant of both: its two categorical recodes accept either the
-numeric coding or the replaced label and return the numeric coding either way.
+For the other analyses, all recoding rules are defined explicitly in the scripts. The numeric values are therefore appropriate, so these scripts use the `RAW` export format. The script `preprocessing/01_build_base_table.R` can handle either format for its two categorical variables: it accepts both the raw numeric codes and the corresponding response labels, and always returns the numeric coding.
 
-Feeding an ExWAS export to a `RAW`-expecting script, or the reverse, does not
-error — the comparisons simply never match, and every derived exposure comes out
-empty or constant. Each derivation script therefore reports how many values it
-actually recoded, so a mismatched export shows up as a count of zero rather than
-as a scan with nothing in it.
+Importantly, using the wrong export format does not usually produce an error. Instead, the comparisons fail to match, causing the derived variables to be empty or constant. To make this problem visible, each derivation script reports the number of values successfully recoded. A count of zero therefore signals a likely export-format mismatch rather than a questionnaire scan containing no relevant responses.
 
 ## Expected file layout
 
