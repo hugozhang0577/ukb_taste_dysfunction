@@ -162,7 +162,7 @@ cross-population cohorts).
 ## Running
 
 ```bash
-export PROJECT_DIR=/path/to/project      # or the RAP project mount
+export PROJECT_DIR=/path/to/project      # RAP project mount
 export CODE_DIR=$PWD/<module>            # the module you are running
 ```
 
