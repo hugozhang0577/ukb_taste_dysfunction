@@ -194,9 +194,6 @@ read from the code rather than from this file:
 #> ship output/base_table/base_table_full.csv -> input/analysis_ready/
 ```
 
-`ship` is the copy that moves a frozen matrix or a scan result under `input/`,
-where later stages look for it; an arrow ending in a filename also renames.
-Only cross-step files are declared — a step's own reports and logs are not.
 `{group}` is `group1` (discovery), `group2` and `group3` (the held-out
 cross-population cohorts); other braces are likewise placeholders.
 
@@ -209,6 +206,4 @@ Rscript check_io.R          # every declared input has a producer
 `taste_2w_strict` is a case if the participant reported a loss or change in taste
 that either lasted at least two weeks **or** affected daily life — either
 criterion suffices, not both. Controls reported neither a taste nor a smell
-change; participants with an isolated smell change are excluded rather than
-counted as controls, as they are not a clean comparison for a taste-specific
-question.
+change; participants with an isolated smell change are excluded.
