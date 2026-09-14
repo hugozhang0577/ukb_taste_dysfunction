@@ -1,0 +1,8 @@
+#!/bin/bash
+dx download "/gwas/cohort_primary/genotype/ukb22828_c22_b0_v3_qc_filtered.bgen" -o ukb22828_c22_b0_v3_qc_filtered.bgen && dx download "/gwas/cohort_primary/genotype/ukb22828_c22_b0_v3_qc_filtered.sample" -o ukb22828_c22_b0_v3_qc_filtered.sample && ./PRSice_linux --base gwas_base_chr22.txt --snp SNP --chr CHR --bp BP --a1 A1 --a2 A2 --stat BETA --pvalue P --target ukb22828_c22_b0_v3_qc_filtered --type bgen --pheno taste_2w_strict_white_gwas_pheno.txt --pheno-col pheno --binary-target T --clump-kb 250 --clump-r2 0.1 --clump-p 1 --bar-levels 1e-5,1e-4,1e-3,0.01,0.05,0.1,0.2,0.3,0.4,0.5,1 --fastscore --all-score --print-snp --keep-ambig --no-regress --seed 42 --thread "$(nproc)" --out prs_chr22 && rm -f ukb22828_c22_b0_v3_qc_filtered.bgen
+
+nohup bash -c 'for CHR in {1..22}; do dx download "/gwas/cohort_primary/genotype/ukb22828_c${CHR}_b0_v3_qc_filtered.bgen" -o ukb22828_c${CHR}_b0_v3_qc_filtered.bgen && dx download "/gwas/cohort_primary/genotype/ukb22828_c${CHR}_b0_v3_qc_filtered.sample" -o ukb22828_c${CHR}_b0_v3_qc_filtered.sample && ./PRSice_linux --base gwas_base_chr${CHR}.txt --snp SNP --chr CHR --bp BP --a1 A1 --a2 A2 --stat BETA --pvalue P --target ukb22828_c${CHR}_b0_v3_qc_filtered --type bgen --pheno taste_2w_strict_white_gwas_pheno.txt --pheno-col pheno --binary-target T --clump-kb 250 --clump-r2 0.1 --clump-p 1 --bar-levels 1e-5,1e-4,1e-3,0.01,0.05,0.1,0.2,0.3,0.4,0.5,1 --fastscore --all-score --print-snp --keep-ambig --no-regress --seed 42 --thread "$(nproc)" --out prs_chr${CHR} && rm -f ukb22828_c${CHR}_b0_v3_qc_filtered.bgen; done' > prs_all_chr.log 2>&1 &
+
+# Check what finished
+
+ls prs_chr*.all_score | wc -l

@@ -1,0 +1,2 @@
+#!/bin/bash
+printf "6 32062687 32062687 rs2071293\n" > hla_lead_snps.txt && plink2 --bgen ukb22828_c6_b0_v3_qc_filtered.bgen ref-first --sample ukb22828_c6_b0_v3_qc_filtered.sample --extract range hla_lead_snps.txt --export A --threads "$(nproc)" --memory "$(( $(awk '/MemTotal/{print int($2*0.8/1024)}' /proc/meminfo) ))" --out hla_lead_genotypes && head -1 hla_lead_genotypes.raw | tr "\t" "\n" | tail -n +7
