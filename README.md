@@ -155,9 +155,6 @@ mkdir -p ~/work && ln -s /mnt/project/input ~/work/input
 export PROJECT_DIR=~/work
 ```
 
-Worker storage is ephemeral: `# Export and dx upload to RAP` marks the points
-where results have to be uploaded before the job ends.
-
 ## Expected file layout
 
 ```text
