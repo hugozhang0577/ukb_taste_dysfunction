@@ -144,8 +144,7 @@ PRSice-2, bgenix.
 On RAP, install all of it into the image: workers have no internet, so anything
 resolved at run time fails. Two consequences already handled in the code —
 MOFA2's basilisk provisions a conda environment on first use, so set
-`MOFA_BASILISK=FALSE` once `mofapy2` is importable; and Arial is absent from a
-bare Linux worker, so install `ttf-mscorefonts-installer` or set `FIG_FONT`.
+`MOFA_BASILISK=FALSE` once `mofapy2` is importable; 
 
 `$PROJECT_DIR` must be **writable** — every step creates directories under
 `output/`. The `/mnt/project` mount is read-only, so work in a scratch directory
@@ -196,10 +195,6 @@ read from the code rather than from this file:
 
 `{group}` is `group1` (discovery), `group2` and `group3` (the held-out
 cross-population cohorts); other braces are likewise placeholders.
-
-```bash
-Rscript check_io.R          # every declared input has a producer
-```
 
 ## Outcome
 
